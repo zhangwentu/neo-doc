@@ -175,6 +175,7 @@ discovery.zen.minimum_master_nodes: 1
 cluster.initial_master_nodes: [“es-master”]
 
 path.logs: /usr/share/elasticsearch/logs
+#设置跨域 其他服务才能访问
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 xpack.security.audit.enabled: true       
