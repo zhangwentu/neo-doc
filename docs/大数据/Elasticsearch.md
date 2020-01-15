@@ -2,7 +2,13 @@
 
 # 全文搜索引擎入门——Elasticsearch 
 
-[TOC]
+- [一、安装](## 一、安装) 
+  - [ 1.安装Es](### 1.安装Es) 
+  - [ 2.安装分词器ik](### 2.安装分词器ik)
+  - [ 3.安装kibana](### 3.安装kibana)
+  - [4.测试一下](### 4.测试一下)
+- [二、应用]()
+  - [1.](### 1.Test)
 
 ## 一、安装
 
@@ -303,11 +309,8 @@ i18n.locale: zh-CN
 ```
 POST _analyze
 {
-
   "analyzer":"ik_smart",
-
-  "text":"中国驻洛杉矶领事馆遭亚裔男子枪击 嫌犯已自首"
-
+  "text":"美国科学家利用从青蛙胚胎中提取的活细胞，创造出了第一个毫米级“活体可编程机器人”。"
 }
 ```
 
@@ -317,81 +320,137 @@ POST _analyze
 {
   "tokens" : [
     {
-      "token" : "中国",
+      "token" : "美国",
       "start_offset" : 0,
       "end_offset" : 2,
       "type" : "CN_WORD",
       "position" : 0
     },
     {
-      "token" : "驻",
+      "token" : "科学家",
       "start_offset" : 2,
-      "end_offset" : 3,
-      "type" : "CN_CHAR",
+      "end_offset" : 5,
+      "type" : "CN_WORD",
       "position" : 1
     },
     {
-      "token" : "洛杉矶",
-      "start_offset" : 3,
-      "end_offset" : 6,
+      "token" : "利用",
+      "start_offset" : 5,
+      "end_offset" : 7,
       "type" : "CN_WORD",
       "position" : 2
     },
     {
-      "token" : "领事馆",
-      "start_offset" : 6,
-      "end_offset" : 9,
-      "type" : "CN_WORD",
+      "token" : "从",
+      "start_offset" : 7,
+      "end_offset" : 8,
+      "type" : "CN_CHAR",
       "position" : 3
     },
     {
-      "token" : "遭",
-      "start_offset" : 9,
+      "token" : "青蛙",
+      "start_offset" : 8,
       "end_offset" : 10,
-      "type" : "CN_CHAR",
+      "type" : "CN_WORD",
       "position" : 4
     },
     {
-      "token" : "亚裔",
+      "token" : "胚胎",
       "start_offset" : 10,
       "end_offset" : 12,
       "type" : "CN_WORD",
       "position" : 5
     },
     {
-      "token" : "男子",
+      "token" : "中",
       "start_offset" : 12,
-      "end_offset" : 14,
-      "type" : "CN_WORD",
+      "end_offset" : 13,
+      "type" : "CN_CHAR",
       "position" : 6
     },
     {
-      "token" : "枪击",
-      "start_offset" : 14,
-      "end_offset" : 16,
+      "token" : "提取",
+      "start_offset" : 13,
+      "end_offset" : 15,
       "type" : "CN_WORD",
       "position" : 7
     },
     {
-      "token" : "嫌犯",
-      "start_offset" : 17,
-      "end_offset" : 19,
-      "type" : "CN_WORD",
+      "token" : "的",
+      "start_offset" : 15,
+      "end_offset" : 16,
+      "type" : "CN_CHAR",
       "position" : 8
     },
     {
-      "token" : "已",
-      "start_offset" : 19,
-      "end_offset" : 20,
+      "token" : "活",
+      "start_offset" : 16,
+      "end_offset" : 17,
       "type" : "CN_CHAR",
       "position" : 9
     },
     {
-      "token" : "自首",
+      "token" : "细胞",
+      "start_offset" : 17,
+      "end_offset" : 19,
+      "type" : "CN_WORD",
+      "position" : 10
+    },
+    {
+      "token" : "创造",
       "start_offset" : 20,
       "end_offset" : 22,
       "type" : "CN_WORD",
-      "position" : 10
+      "position" : 11
+    },
+    {
+      "token" : "出了",
+      "start_offset" : 22,
+      "end_offset" : 24,
+      "type" : "CN_WORD",
+      "position" : 12
+    },
+    {
+      "token" : "第一个",
+      "start_offset" : 24,
+      "end_offset" : 27,
+      "type" : "CN_WORD",
+      "position" : 13
+    },
+    {
+      "token" : "毫米",
+      "start_offset" : 27,
+      "end_offset" : 29,
+      "type" : "CN_WORD",
+      "position" : 14
+    },
+    {
+      "token" : "级",
+      "start_offset" : 29,
+      "end_offset" : 30,
+      "type" : "CN_CHAR",
+      "position" : 15
+    },
+    {
+      "token" : "活体",
+      "start_offset" : 31,
+      "end_offset" : 33,
+      "type" : "CN_WORD",
+      "position" : 16
+    },
+    {
+      "token" : "可编程",
+      "start_offset" : 33,
+      "end_offset" : 36,
+      "type" : "CN_WORD",
+      "position" : 17
+    },
+    {
+      "token" : "机器人",
+      "start_offset" : 36,
+      "end_offset" : 39,
+      "type" : "CN_WORD",
+      "position" : 18
     }
   ]
 }
