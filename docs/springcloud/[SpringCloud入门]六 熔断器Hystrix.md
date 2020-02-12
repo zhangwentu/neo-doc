@@ -72,4 +72,8 @@ public class ProducerServiceHystric implements IFeignService {
 
 实现效果：
 
-![1](https://tva1.sinaimg.cn/large/0082zybpgy1gbtq9bqhe8j30ke02wmxa.jpg)
+<p align="center">
+    <a href="https://tva1.sinaimg.cn/large/0082zybpgy1gbtq9bqhe8j30ke02wmxa.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtq9bqhe8j30ke02wmxa.jpg" width=""/>
+    </a>
+</p>

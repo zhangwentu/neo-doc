@@ -8,13 +8,21 @@ Eureka是Netflix开源的一款提供服务注册和发现的产品，它提供�
 
 以前的服务可能互相之间的调用是各种交织错乱的 如下图：
 
-![image-服务调用](https://tva1.sinaimg.cn/large/0082zybpgy1gbtl7xs3vsj315c0u0q5c.jpg)
+<p align="center">
+    <a href="https://tva1.sinaimg.cn/large/0082zybpgy1gbtl7xs3vsj315c0u0q5c.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtl7xs3vsj315c0u0q5c.jpg" width=""/>
+    </a>
+</p>
 
 当使用注册中心之后可以有效的将服务管理起来所有的服务只向注册中心暴露自己的请求和服务
 
 服务间的关系将会如下图：
 
-![image-注册中心](https://tva1.sinaimg.cn/large/0082zybpgy1gbtllqiy89j31gm0qeq54.jpg)
+<p align="center">
+    <a href="https://tva1.sinaimg.cn/large/0082zybpgy1gbtllqiy89j31gm0qeq54.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtllqiy89j31gm0qeq54.jpg" width=""/>
+    </a>
+</p>
 
 
 
@@ -84,9 +92,19 @@ http://127.0.0.1:10086/
 
 新建另一个注册中心 分别将两个注册中心的服务地址指向对方
 
-![image-注册中心](https://tva1.sinaimg.cn/large/0082zybpgy1gbtmg1gikcj317s0n0q69.jpg)
+<p align="center">
+    <a href="https://tva1.sinaimg.cn/large/0082zybpgy1gbtmg1gikcj317s0n0q69.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtmg1gikcj317s0n0q69.jpg" width=""/>
+    </a>
+</p>
 
-![image-注册中心](https://tva1.sinaimg.cn/large/0082zybpgy1gbtmib5jsnj31580nedj5.jpg)
+<p align="center">
+    <a href="https://tva1.sinaimg.cn/large/0082zybpgy1gbtmib5jsnj31580nedj5.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtmib5jsnj31580nedj5.jpg" width=""/>
+    </a>
+</p>
+
+
 
 再将应用的注册中心同时指定这两个注册中心，
 

@@ -97,7 +97,9 @@ public void ribbonTest() {
 
 实现效果：
 
-![image-注册中心](https://tva1.sinaimg.cn/large/0082zybpgy1gbtolqn24bj31ju05qn0j.jpg)
-
-
+<p align="center">
+    <a href="https://tva1.sinaimg.cn/large/0082zybpgy1gbtolqn24bj31ju05qn0j.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbtolqn24bj31ju05qn0j.jpg" width=""/>
+    </a>
+</p>
 
