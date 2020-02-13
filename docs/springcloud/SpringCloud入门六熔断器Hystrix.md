@@ -12,7 +12,7 @@ feign:
     enabled: true #开启熔断
 ```
 
-有的版本默认就是开启的，但是Greenwich.RELEASE版本默认关闭，这里必须加上这个配置
+有的早期版本默认就是开启的，但是Greenwich.RELEASE版本已经是默认关闭，这里必须加上这个配置
 
 3.给之前feign client增加fallback
 

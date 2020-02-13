@@ -86,7 +86,30 @@ eureka:
 
 EnableFeignClients用来开启feign
 
-5.DEMO
+5.feign调用接口
+
+```
+package com.neo.customer.service;
+
+import com.neo.customer.service.hystrix.ProducerServiceHystric;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * <p></p>
+ *
+ * @author neo
+ * @date 2020/2/11 17:11
+ */
+@FeignClient(name = "producer-server")
+public interface IFeignService {
+    @RequestMapping("/hello")
+    String hello(@RequestParam(name = "name") String name);
+}
+```
+
+6.DEMO
 
 做两个demo一个controller访问 一个是test 单元测试
 
