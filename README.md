@@ -34,9 +34,9 @@
   
   - [负载均衡（ribbon）](./docs/springcloud/SpringCloud入门五负载均衡Ribbon.md) 
   
-  - [熔断器](./docs/springcloud/SpringCloud入门六熔断器Hystrix.md) 
+  - [熔断器（Hystrix）](./docs/springcloud/SpringCloud入门六熔断器Hystrix.md) 
   
-  - 网关路由（zuul）
+  - [网关路由（zuul）](./SpringCloud入门七网关Zuul.md) 
 
   - 配置中心(apollo)
   

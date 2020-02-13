@@ -1,6 +1,6 @@
 1.简介
 
-Ribbon是一个基于HTTP和TCP的客户端负载均衡工具,它几乎存在于每一个Spring Cloud构建的微服务和基础设施中,不需要额外的部署，比如常用的feign就用到了ribbon, 以及后面会讲到的网关(zuul)都会用到ribbon.
+Ribbon是一个基于HTTP和TCP的客户端负载均衡工具,可以用于对微服务以外应用的请求。它几乎存在于每一个Spring Cloud构建的微服务和基础设施中,不需要额外的部署，比如常用的feign就用到了ribbon, 以及后面会讲到的网关(zuul)都会用到ribbon.
 
 下面将演示 服务消费者直接通过调用被@LoadBalanced注解修饰过的RestTemplate来实现面向服务的接口调用。
 
