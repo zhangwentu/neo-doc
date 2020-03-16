@@ -22,9 +22,9 @@ SpringCloud 入门
 
 6.[熔断器（hystrix）](./SpringCloud入门六熔断器Hystrix.md) 
 
-7.网关路由（zuul）
+7.[网关路由（zuul](./SpringCloud入门七网关Zuul.md) 
 
-8.配置中心(apollo)
+8.配置中心+总线(config+bus)
 
 9.链路监控（slueth）
 
