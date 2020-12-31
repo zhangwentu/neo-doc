@@ -46,7 +46,9 @@
   
   - 
   
-    
+- 中间件
+	- RocketMQ
+	- Redis 	    
   
   
 
