@@ -97,10 +97,10 @@ docker.io/library/redis  latest  ef47f3b6dc11  2 weeks ago  108 MB
 ```
 3.启动镜像:
 ```
-docker run -itd --name redis -p 6379:63799 redis --requirepass "A*#5HSaR"
+docker run -itd --name redis -p 63799:6379 redis --requirepass "A*#5HSaR"
 ```
 参数说明 ：
-- **-p 6379:63799**：映射容器服务的 6379 端口到宿主机的 63799 端口。
+- **-p 63799:6379**：映射容器服务的 6379 端口到宿主机的 63799 端口。
 - 外部可以直接通过宿主机ip:63799 访问到 Redis 的服务。
 - --requirepass 设置服务的密码
 
