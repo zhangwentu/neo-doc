@@ -97,11 +97,12 @@ docker.io/library/redis  latest  ef47f3b6dc11  2 weeks ago  108 MB
 ```
 3.启动镜像:
 ```
-docker run -itd --name redis -p 6379:63799 redis
+docker run -itd --name redis -p 6379:63799 redis --requirepass "A*#5HSaR"
 ```
 参数说明 ：
 - **-p 6379:63799**：映射容器服务的 6379 端口到宿主机的 63799 端口。
 - 外部可以直接通过宿主机ip:63799 访问到 Redis 的服务。
+- --requirepass 设置服务的密码
 
 查看进程:
 
@@ -152,6 +153,9 @@ rename-command KEYS ""
 
 # 此外还应禁止 FLUSHALL 和 FLUSHDB 命令
 # 这两个命令会清空数据，并且不会失败
+
+# 设定连接主节点所使用的密码
+masterauth "123456"
 ```
 redis-slave1.conf
 ```
@@ -428,25 +432,26 @@ services:
 
 目录结构如下
 <p align="left">
-    <a href="https://tva1.sinaimg.cn/large/0081Kckwly1gm75ll63kyj30d709udgd.jpg" target="_blank">
-        <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm75ll63kyj30d709udgd.jpg" width=""/>
+    <a href="https://tva1.sinaimg.cn/large/0081Kckwly1gmbf9444ibj30ae06kt8z.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gmbf9444ibj30ae06kt8z.jpg" width=""/>
     </a>
 </p> 
 
+
 3.启动服务
 ```
+docker-compose  -f redis-server/docker-compose-redis-server.yml up -d
 docker-compose  -f redis-sentinel/docker-compose-redis-sentinel.yml up -d
-docker-compose  -f redis-server/docker-compose-redis-sentinel.yml up -d
 ```
 <p align="left">
     <a href="https://tva1.sinaimg.cn/large/0081Kckwly1gm75owc1opj30zh03rmy1.jpg" target="_blank">
         <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm75owc1opj30zh03rmy1.jpg" width=""/>
     </a>
 </p> 
-
 4.测试服务
 进入容器服务
 执行 info replication 查看服务状态
+
 <p align="left">
     <a href="https://tva1.sinaimg.cn/large/0081Kckwly1gm75tahxu3j30j608egmu.jpg" target="_blank">
         <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm75tahxu3j30j608egmu.jpg" width=""/>
@@ -456,11 +461,20 @@ docker-compose  -f redis-server/docker-compose-redis-sentinel.yml up -d
 
 现在我们杀掉主节点 redis-server-master
 自动切换了节点2为主节点
+
 <p align="left">
     <a href="https://tva1.sinaimg.cn/large/0081Kckwly1gm762k0u56j30lh0dowgi.jpg" target="_blank">
         <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm762k0u56j30lh0dowgi.jpg" width=""/>
     </a>
 </p> 
+恢复master 之后 master又变成了 slave2的从节点
+
+<p align="left">
+    <a href="https://tva1.sinaimg.cn/large/0081Kckwly1gmbft6pel4j30dm06ugmi.jpg" target="_blank">
+        <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gmbft6pel4j30dm06ugmi.jpg" width=""/>
+    </a>
+</p> 
+
 
 
 四、**Redis Cluster**  集群模式搭建 (三主三从)
